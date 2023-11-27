@@ -1,0 +1,51 @@
+@import 'styles/variables';
+
+.OverallWaterQuality {
+  &__quality {
+    color: $blue;
+  }
+
+  &__description {
+    flex: 1 1 50%;
+    margin-bottom: 1rem;
+  }
+
+  &__chart {
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    margin-left: $spacer;
+    margin-right: $spacer;
+  }
+
+  &__chart-rotate {
+    height: 200px;
+    transform: rotate(148deg);
+  }
+
+  &__indicator-wrap {
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(-150deg);
+    position: absolute;
+  }
+
+  &__indicator {
+    background-color: $text-grey-1;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 1s cubic-bezier(0.54, 0.59, 0.68, 1.13);
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-bottom: 4rem solid $text-grey-1;
+      border-left: 0.4rem solid rgba(255, 255, 255, 0);
+      border-right: 0.4rem solid rgba(255, 255, 255, 0);
+      left: 50%;
+      top: -100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

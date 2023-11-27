@@ -1,0 +1,88 @@
+@import 'styles/variables';
+
+.signed-in-dropdown {
+  left: -133px !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+.legacy-navbar {
+  //color: white;
+  //background: $primaryblue;
+  //min-height: 63px;
+  border-bottom: 2px solid #437fad;
+  // .hamburgerMenu-placeholder {
+  //   display: none;
+  // }
+  .dashboard {
+    text-decoration: none;
+    color: black;
+  }
+  .contact {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .sign-out {
+    margin-left: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .navbar-brand {
+    //color: white;
+    // font-weight: bold;
+    // font-size: 30px;
+    // margin-bottom: 10px;
+  }
+  .name-and-button {
+    display: flex;
+    margin-top: 5px;
+    .dropdown {
+      .dropdown-menu {
+        left: -113px;
+      }
+    }
+    .name-and-title {
+      margin-right: 15px;
+      margin-top: 8px;
+      h6 {
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      p {
+        text-align: right;
+        font-size: 10px;
+        color: lightgrey;
+      }
+    }
+    .nav-button {
+      cursor: pointer;
+      text-align: center;
+      padding-top: 11px;
+      font-size: 14px;
+      height: 45px;
+      width: 45px;
+      font-weight: bold;
+      background: $lightblue;
+    }
+  }
+  .signout-links {
+    .register {
+      text-decoration: none;
+      color: black;
+    }
+    .login {
+      text-decoration: none;
+      color: black;
+      margin-left: 20px;
+    }
+    // a {
+    //   //color: white;
+    //   &:first-child {
+    //     padding-right: 30px;
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,68 @@
+@import 'styles/variables';
+
+.DropdownButton {
+  &.show .dropdown-toggle {
+    background-color: white !important;
+    color: $body-color !important;
+    border-color: lighten($primary, 10%) !important;
+
+    &:not(:focus) {
+      border-color: initial !important;
+    }
+  }
+
+  &--block {
+    button {
+      width: 100%;
+    }
+  }
+
+  button {
+    background-color: white;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    border-color: $component-grey-border;
+    color: $body-color;
+    padding-right: 2em;
+    font-weight: normal;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' style='color: %23777'%3E%3Cpath fill='currentColor' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z' %3E%3C/path%3E%3C/svg%3E");
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+
+    &:after {
+      content: none;
+    }
+
+    &:focus {
+      border-color: lighten($primary, 10%) !important;
+    }
+
+    &:hover {
+      border-color: initial;
+      background-color: darken(white, 5%);
+      color: lighten($body-color, 5%);
+    }
+
+    &:active {
+      border-color: lighten($primary, 10%) !important;
+      background-color: white !important;
+      color: $body-color !important;
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+    max-height: 30em;
+    overflow-y: auto;
+
+    .dropdown-item {
+      color: $body-color;
+
+      &:active {
+        background-color: $component-grey-border;
+        color: white;
+      }
+    }
+  }
+}

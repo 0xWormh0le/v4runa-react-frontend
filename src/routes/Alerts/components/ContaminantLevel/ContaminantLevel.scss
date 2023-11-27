@@ -1,0 +1,32 @@
+@import 'styles/variables';
+
+.ContaminantLevel {
+  height: 100%;
+
+  &__header {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+    tr th {
+      font-weight: normal;
+      padding-top: $spacer * 0.5;
+      padding-bottom: $spacer * 0.5;
+    }
+  }
+
+  &__body {
+    line-height: $spacer * 2.5;
+  }
+
+  &__field-black {
+    color: $typography-figure-color;
+  }
+
+  &__up-arrow {
+    color: $green;
+  }
+
+  &__down-arrow {
+    color: $red;
+  }
+}

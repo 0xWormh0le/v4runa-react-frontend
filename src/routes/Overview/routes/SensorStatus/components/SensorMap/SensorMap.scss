@@ -1,0 +1,39 @@
+@import 'styles/variables';
+
+.SensorMap {
+  position: relative;
+
+  &__location {
+    color: $yellow;
+  }
+
+  &__sensor {
+    color: $yellow;
+  }
+
+  &__chemical {
+    border: 1px solid lightgray;
+    padding: $spacer * 0.5;
+    text-align: center;
+  }
+
+  &__chemical-name {
+    color: $blue;
+  }
+
+  &__chemical-value {
+    color: $typography-figure-color;
+  }
+
+  @include mq($until: wide) {
+    &__map {
+      height: 300px;
+    }
+  }
+
+  &__color-bar {
+    flex-grow: 1;
+    background-image: linear-gradient(to right, white, $blue);
+    border: 1px solid #ddd;
+  }
+}

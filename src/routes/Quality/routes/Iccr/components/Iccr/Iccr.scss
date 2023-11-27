@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.Iccr {
+  &__grid {
+    display: grid;
+    margin-bottom: $spacer;
+  }
+
+  &__quality-and-parameter-counter {
+    display: grid;
+    margin: $spacer 0;
+  }
+
+  @include mq($from: desktop) {
+    &__grid--last {
+      margin-bottom: 0;
+    }
+
+    &__quality-and-parameter {
+      position: fixed !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: calc(100vh - #{$main-header-height} - #{$spacer * 2});
+      max-width: calc((100% - #{$main-sidebar-width}) * 0.33) !important;
+    }
+  }
+}

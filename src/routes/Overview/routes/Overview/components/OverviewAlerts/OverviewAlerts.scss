@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+.OverviewAlerts {
+  margin-bottom: 15px;
+  &__title {
+    color: $component-title;
+  }
+  &__header-divider {
+    color: $component-title;
+    font-weight: $component-header-divider-weight;
+    font-size: $component-header-divider-size;
+  }
+}

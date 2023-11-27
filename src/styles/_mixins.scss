@@ -1,0 +1,51 @@
+@mixin clearfix {
+  &:after {
+    clear: both;
+    display: table;
+    content: '';
+  }
+}
+
+@mixin vhcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin hcenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin square-checkbox {
+  display: none;
+
+  & + label {
+    margin-left: $spacer * 0.5;
+    position: relative;
+  }
+
+  & + label:before {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    content: '';
+    border: 1px solid $lightgrey-text;
+    left: $spacer * -1.5;
+    top: 2px;
+  }
+
+  &:checked {
+    & + label:before {
+      background-color: $blue-primary;
+    }
+  }
+}

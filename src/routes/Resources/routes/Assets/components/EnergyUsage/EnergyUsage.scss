@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+.EnergyUsage {
+  &__legend-item {
+    min-width: $spacer * 0.7;
+    height: $spacer * 0.7;
+    margin-right: $spacer * 0.5;
+  }
+
+  &__chart {
+    position: relative;
+    min-height: 220px;
+    height: 100%;
+  }
+
+  &__legend {
+    min-width: 10em;
+  }
+
+  &__chart-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2 !important;
+  }
+
+  &__graph-vertical-label {
+    position: absolute;
+    left: -$spacer * 0.5;
+    top: 50%;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    transform-origin: 0 0;
+  }
+}

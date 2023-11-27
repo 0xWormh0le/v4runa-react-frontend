@@ -1,0 +1,22 @@
+{
+  "last_year": [
+    ["Power Generation Equipment", 284563.0],
+    ["Pumping Equipment", 1019130.0],
+    ["Water Treatments Equipment", 113076.0],
+    ["Distribution Reservoirs and Standpipes", 1272813.0],
+    ["Distribution Lines", 3577791.0],
+    ["Services", 290499.0],
+    ["Meters and meter Installations", 1082693.0],
+    ["Hydrants", 217913.0]
+  ],
+  "current_year": [
+    ["Power Generation Equipment", 243581.0],
+    ["Pumping Equipment", 831402.0],
+    ["Water Treatments Equipment", 60482.0],
+    ["Distribution Reservoirs and Standpipes", 1122431.0],
+    ["Distribution Lines", 80941.0],
+    ["Services", 290499.0],
+    ["Meters and meter Installations", 919415.0],
+    ["Hydrants", 225913.0]
+  ]
+}

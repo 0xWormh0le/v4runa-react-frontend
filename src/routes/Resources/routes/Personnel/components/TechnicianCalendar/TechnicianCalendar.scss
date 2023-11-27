@@ -1,0 +1,72 @@
+@import 'styles/variables';
+
+@mixin day {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 2.5em;
+  margin: auto;
+  height: 2.5em;
+  line-height: 2.3em;
+}
+
+.TechnicianCalendar {
+  &__caption {
+    color: $component-sub-title;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $spacer;
+    justify-content: space-between;
+    align-items: center;
+    width: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__dropdown-box {
+    display: flex;
+    padding-bottom: $spacer;
+  }
+
+  &__year-picker {
+    margin-right: $spacer * 0.5;
+    min-width: 10em;
+  }
+
+  &__month-picker {
+    text-transform: uppercase;
+  }
+
+  &__body {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: $spacer;
+    background-color: $grey-background;
+    font-size: 0.9em;
+  }
+
+  &__cell {
+    width: 14.28%;
+    text-align: center;
+    padding: $spacer * 0.5;
+  }
+
+  &__day {
+    @include day;
+
+    &--highlight {
+      @include day;
+      border: 2px solid $blue-dark;
+      background-color: darken(white, 2%);
+    }
+
+    &--out-of-month {
+      @include day;
+
+      color: lighten($lightgrey-text, 20%);
+    }
+  }
+}

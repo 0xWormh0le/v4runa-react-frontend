@@ -1,0 +1,40 @@
+@import 'styles/variables';
+
+.WorkOrder {
+  // max-width: 700px;
+  margin: auto;
+
+  textarea {
+    min-height: 150px;
+  }
+
+  &__types {
+    margin: $spacer 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    input[type='checkbox'] + label {
+      font-weight: inherit;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: $spacer * 0.2;
+  }
+
+  &__next-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__next.btn {
+    width: 7rem;
+    display: block;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}

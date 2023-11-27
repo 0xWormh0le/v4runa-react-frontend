@@ -1,0 +1,8 @@
+@import 'styles/variables';
+
+.SideNavMenu {
+  margin-top: map-get($spacers, 5);
+  &__active {
+    background: $main-sidebar-hover-color;
+  }
+}

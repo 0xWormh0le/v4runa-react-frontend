@@ -1,0 +1,50 @@
+@import 'styles/variables';
+
+.BudgetAndCost {
+  margin-bottom: 15px;
+  &__title-container {
+    margin-bottom: 10px;
+  }
+  &__col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__header-divider {
+    color: $component-title;
+    font-weight: $component-header-divider-weight;
+    font-size: $component-header-divider-size;
+  }
+  &__divider {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  &__dropdown-container {
+    position: relative;
+    height: 30px;
+  }
+  &__dropdown {
+    right: 0px;
+    position: absolute;
+  }
+  &__table {
+    margin-top: 10px;
+  }
+  &__text {
+    color: $component-title;
+    line-height: 1.1;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  &__first-row {
+    margin-bottom: 10px;
+  }
+  &__value {
+    text-align: right;
+  }
+  &__total {
+    color: $money-green;
+    text-align: right;
+  }
+}

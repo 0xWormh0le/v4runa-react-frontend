@@ -1,0 +1,78 @@
+@import 'styles/variables';
+
+.Recommendations {
+  &__row-spacer {
+    margin: -$spacer * 0.5 0;
+  }
+
+  &__col-spacer {
+    padding: $spacer * 0.5 0;
+  }
+
+  &__item {
+    &:hover {
+      text-decoration: none;
+
+      .card {
+        background-color: white;
+      }
+    }
+
+    .card {
+      transition: background-color 0.3s ease;
+      background-color: inherit;
+      margin-bottom: $spacer;
+    }
+
+    .Typography {
+      color: $lightgrey-text;
+    }
+
+    &.active {
+      .card {
+        background-color: white;
+
+        @include mq($from: desktop) {
+          margin-right: $spacer * -2;
+        }
+      }
+
+      .Typography {
+        color: $blue-primary;
+      }
+    }
+  }
+
+  &__log {
+    max-height: 250px;
+  }
+
+  &__satisfaction {
+    font-size: 2rem;
+    color: $lightgrey-text;
+
+    &.active {
+      color: $blue-primary;
+    }
+  }
+
+  &__item-arrow {
+    color: $body-color-darker;
+    width: $spacer * 2;
+
+    @include mq($until: desktop) {
+      display: none;
+    }
+  }
+
+  &__right-pane {
+    background-color: white;
+    margin: -$spacer;
+    padding: $spacer;
+
+    @include mq($from: desktop) {
+      margin-left: 0;
+      min-height: calc(100vh - #{$main-header-height});
+    }
+  }
+}

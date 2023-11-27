@@ -1,0 +1,58 @@
+// @import '../_variables.scss';
+// Color system
+$primary: $blue-primary;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-shadows: true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.25,
+  5: $spacer * 1.5,
+  6: $spacer * 3
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: #ececee;
+$body-color: #6f7072;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 1rem;
+$container-padding-x: $grid-gutter-width / 2;
+
+// Cards
+$card-border-radius: 0;
+$card-border-color: #cccdd0;
+$card-spacer-x: 0.8rem;
+
+// Button
+
+// Fonts
+$font-family-base: 'Roboto', sans-serif;
+$headings-font-family: 'Oswald', sans-serif;
+
+$font-size-base: 0.9rem; // Assumes the browser default, typically `16px`
+$font-size-xl: $font-size-base * 1.5;
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-xs: $font-size-base * 0.8;
+$font-size-xxs: $font-size-base * 0.5625;

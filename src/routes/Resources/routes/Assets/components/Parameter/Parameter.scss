@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+.Parameter {
+  &__control {
+    width: $spacer * 7 !important;
+    margin-top: $spacer * 0.25;
+    margin-bottom: $spacer * 0.25;
+
+    &:not(:last-child) {
+      margin-right: $spacer * 0.5;
+    }
+  }
+}

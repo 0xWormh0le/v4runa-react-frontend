@@ -1,0 +1,74 @@
+@import 'styles/variables';
+
+.ChlorineResidualReport {
+  height: 100%;
+  min-height: 300px;
+
+  &__bar-graph {
+    p {
+      margin: 0px;
+    }
+  }
+
+  &__contaminant {
+    text-align: center;
+  }
+  
+  &__chart-content {
+    height: 147px;
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+  }
+
+  &__disinfectants {
+    border-bottom: 2px solid $blue;
+  }
+  
+  &__column-header {
+    height: 100%;
+    border-left: 1px solid lightgrey;
+  }
+
+  &__header-item {
+    padding-top: 38px;
+    text-align: center;
+  }
+
+  &__table-row-1 {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &__table-row-2 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &__number {
+    text-align: center;
+  }
+
+  @include mq($until: desktop) {
+    &__contaminant {
+      font-size: 10px;
+    }
+  }
+
+  @include mq($until: tablet) {
+    &__contaminant {
+      font-size: 10px;
+    }
+
+    &__bar-graph {
+      p {
+        font-size: 10px;
+      }
+    }
+
+    &__header-item {
+      font-size: 10px;
+    }
+  }
+}

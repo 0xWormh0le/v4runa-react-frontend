@@ -1,0 +1,764 @@
+@import 'styles/variables';
+
+#report {
+  &.white {
+    background-color: #fff;
+  }
+  hr {
+    background: #c4c4c4;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .icon-box {
+    border-radius: 8px;
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    margin-right: 15px;
+    img {
+      height: 55px;
+      position: relative;
+    }
+  }
+  .report-title-section {
+    padding-top: 10px;
+    .title-info {
+      .seperate {
+        margin: 0px 10px 0px 10px;
+      }
+    }
+    .contact-information {
+      -webkit-box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+      -moz-box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+      box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+      border: 1px solid lightgrey;
+      background: #f7f7f7;
+      padding: 15px;
+      margin-top: 20px;
+      .description {
+        margin-top: 18px;
+        font-style: italic;
+      }
+    }
+    .language-description {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .spanish {
+        color: grey;
+      }
+    }
+  }
+  .overall-water-quality {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .quality-box {
+      padding: 15px;
+      border: 1px solid lightgrey;
+      -webkit-box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+      -moz-box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+      box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    }
+    .center-circle {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      background: black;
+      border-radius: 100%;
+      left: 45%;
+      top: 42%;
+      z-index: 100;
+    }
+    .needle {
+      left: 46%;
+      z-index: 100;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 70px solid black;
+      &.excellent {
+        transform: rotate(118deg);
+        top: 57px;
+        left: 61%;
+      }
+      &.good {
+        left: 47%;
+        top: 2px;
+      }
+      &.bad {
+        transform: rotate(-118deg);
+        top: 57px;
+        left: 33%;
+      }
+    }
+    .chart-rotate {
+      transform: rotate(147deg);
+    }
+  }
+  .pie-chart-and-text {
+    margin-top: 20px;
+    .inside-doughnut-text {
+      position: absolute;
+      width: 84px;
+      text-align: center;
+    }
+  }
+  .inside-contaminants-text {
+    position: absolute;
+    top: 40px;
+    .inside-inside-chart-text {
+      margin-left: 75%;
+      width: 84px;
+      text-align: center;
+    }
+  }
+  .likely-source {
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    -webkit-box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    padding: 15px;
+    background: #f7f7f7;
+  }
+  .chart {
+    border: 1px solid lightgrey;
+    height: 100%;
+    min-height: 300px;
+    -webkit-box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    box-shadow: 0px 0px 4px -2px rgba(143, 143, 143, 1);
+    padding: 15px;
+    .bar-graph {
+      p {
+        margin: 0px;
+      }
+      .contaminant {
+        text-align: center;
+      }
+      .chart-content {
+        height: 147px;
+        border-bottom: 1px solid lightgrey;
+        border-left: 1px solid lightgrey;
+      }
+      .bar-chart-row {
+        &.inorganic {
+          border-bottom: 2px solid $yellow;
+        }
+        &.disinfectants {
+          border-bottom: 2px solid $blue;
+        }
+        &.lead-and-copper {
+          border-bottom: 2px solid $red;
+        }
+        .column-header {
+          border-left: 1px solid lightgrey;
+          height: 100%;
+          .header-item {
+            padding-top: 38px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .table-row-1 {
+      border-top: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .table-row-2 {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .number {
+      text-align: center;
+    }
+  }
+  .violations {
+    -webkit-box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+    box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+    border: 1px solid lightgrey;
+    background: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    .tab {
+      .content {
+        .bold-title {
+          padding-top: 10px;
+        }
+      }
+    }
+    .content {
+      .vio-1 {
+        margin-bottom: 15px;
+      }
+      p {
+        margin: 0px;
+      }
+    }
+  }
+
+  .additional-health-information {
+    -webkit-box-shadow: 0px 0px 8px -2px rgba(143, 143, 143, 1);
+    -moz-box-shadow: 0px 0px 8px -2px rgba(143, 143, 143, 1);
+    box-shadow: 0px 0px 8px -2px rgba(143, 143, 143, 1);
+    padding: 4px 10px 10px 10px;
+    margin-bottom: 10px;
+    .tab {
+      cursor: pointer;
+      display: flex;
+      h6 {
+        font-weight: bold;
+      }
+      i {
+        top: 9px;
+        font-weight: bold;
+        position: relative;
+      }
+      .content {
+        .bold-title {
+          padding-top: 10px;
+        }
+      }
+    }
+    .content {
+      padding: 5px;
+      .vio-1 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .definitions-and-abbreviations {
+    .tab {
+      cursor: pointer;
+      display: flex;
+      h6 {
+        font-weight: bold;
+      }
+      i {
+        top: 9px;
+        font-weight: bold;
+        position: relative;
+      }
+      .content {
+        .bold-title {
+          padding-top: 10px;
+        }
+      }
+    }
+    .content {
+      -webkit-box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+      -moz-box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+      box-shadow: 0px 0px 4px -2px rgba(160, 160, 160, 1);
+      border: 1px solid lightgrey;
+      background: #f7f7f7;
+      padding: 25px;
+      margin-bottom: 15px;
+      .def {
+        p {
+          margin-top: 2px;
+        }
+      }
+
+      .vio-1 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .system-susceptibility-summary {
+    p {
+      margin-bottom: 0rem !important;
+    }
+  }
+  .copyright {
+    text-align: right;
+    display: grid;
+    p {
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
+    .logo-text {
+      img {
+        margin-top: -2px;
+        margin-bottom: -17px;
+        margin-right: -14px;
+        height: 45px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          top: 42px;
+          .inside-inside-chart-text {
+            margin-left: 30%;
+          }
+        }
+      }
+    }
+    .inside-contaminants-text {
+      .inside-inside-chart-text {
+        margin-left: 55%;
+      }
+    }
+    .overall-water-quality {
+      .center-circle {
+        left: 44%;
+      }
+      .needle {
+        &.bad {
+          left: 30%;
+        }
+        &.good {
+          left: 46%;
+        }
+        &.excellent {
+          left: 64%;
+        }
+      }
+    }
+  }
+  .hero {
+    height: 650px;
+    .desktop {
+      margin-top: 40px;
+      .frame {
+        img {
+          height: 350px;
+          margin-left: -10px;
+        }
+        .report {
+          height: 221px;
+          margin-left: -416px;
+          margin-bottom: 90px;
+        }
+      }
+    }
+    .old-monitor {
+      .frame {
+        top: -283px;
+        img {
+          height: 380px;
+          margin-left: -60px;
+        }
+        .report {
+          margin-left: -281px;
+          margin-bottom: 141px;
+          height: 153px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container.report-main {
+    width: 900px;
+  }
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        margin-bottom: 20px;
+        .inside-chart-text {
+          top: 42px;
+          .inside-inside-chart-text {
+            margin-left: 148%;
+          }
+        }
+      }
+    }
+    .chart {
+      .bar-graph {
+        .contaminant {
+          font-size: 10px;
+        }
+      }
+    }
+    .inside-contaminants-text {
+      .inside-inside-chart-text {
+        margin-left: 152%;
+      }
+    }
+    .overall-water-quality {
+      .center-circle {
+        top: 63px;
+        left: 41%;
+      }
+      .needle {
+        border-bottom: 60px solid black;
+        &.bad {
+          top: 56px;
+          left: 30%;
+        }
+        &.good {
+          top: 23px;
+          left: 44%;
+        }
+        &.excellent {
+          top: 55px;
+          left: 58%;
+        }
+      }
+    }
+  }
+  .hero {
+    height: 1100px;
+    .desktop {
+      margin-top: 100px;
+      .frame {
+        margin-right: 0px;
+      }
+    }
+    .old-monitor {
+      margin-bottom: 40px;
+      .frame {
+        margin-right: -55px;
+      }
+    }
+    .arrow-box {
+      transform: rotate(90deg);
+      right: 45%;
+      top: 675px;
+    }
+  }
+  .nav .brand-logo {
+    left: none !important;
+    img {
+      position: relative !important;
+    }
+  }
+}
+
+//BOOTSTRAP SMALL VIEW
+@media (max-width: 768px) {
+  .container.report-main {
+    width: 600px;
+  }
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          .inside-inside-chart-text {
+            margin-left: 95%;
+          }
+        }
+      }
+    }
+    .chart {
+      //background: red;
+      .bar-graph {
+        .contaminant {
+          font-size: 10px;
+        }
+        p {
+          font-size: 10px;
+        }
+        .bar-chart-row {
+          .column-header {
+            .header-item {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+    .inside-contaminants-text {
+      .inside-inside-chart-text {
+        margin-left: 252%;
+      }
+    }
+
+    .overall-water-quality {
+      .center-circle {
+        left: 45%;
+      }
+      .needle {
+        border-bottom: 70px solid black;
+        &.bad {
+          top: 56px;
+          left: 33%;
+        }
+        &.good {
+          top: 3px;
+          left: 47%;
+        }
+        &.excellent {
+          top: 57px;
+          left: 62%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container.report-main {
+    width: 450px;
+  }
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          .inside-inside-chart-text {
+            margin-left: 68%;
+          }
+        }
+      }
+    }
+    .inside-contaminants-text {
+      .inside-inside-chart-text {
+        margin-left: 202%;
+      }
+    }
+
+    .overall-water-quality {
+      .center-circle {
+        left: 43%;
+      }
+      .needle {
+        border-bottom: 70px solid black;
+        &.bad {
+          top: 56px;
+          left: 31%;
+        }
+        &.good {
+          top: 6px;
+          left: 45.5%;
+        }
+        &.excellent {
+          left: 63%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .container.report-main {
+    width: 365px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .container.report-main {
+    width: 340px;
+  }
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          .inside-inside-chart-text {
+            margin-left: 28%;
+          }
+        }
+      }
+    }
+    .additional-contaminants {
+      .inside-contaminants-text {
+        .inside-inside-chart-text {
+          margin-left: 125%;
+        }
+      }
+    }
+    .overall-water-quality {
+      .center-circle {
+        height: 25px;
+        width: 25px;
+        left: 41%;
+      }
+      .needle {
+        border-bottom: 38px solid black;
+        &.bad {
+          top: 69px;
+          left: 27%;
+        }
+        &.good {
+          top: 30px;
+          left: 44%;
+        }
+        &.excellent {
+          top: 68px;
+          left: 60%;
+        }
+      }
+    }
+  }
+}
+
+//IPAD VIEW
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container.report-main {
+    width: 660px;
+  }
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          .inside-inside-chart-text {
+            margin-left: 129%;
+          }
+        }
+      }
+    }
+    .additional-contaminants {
+      .inside-contaminants-text {
+        .inside-inside-chart-text {
+          margin-left: 130%;
+        }
+      }
+    }
+
+    .overall-water-quality {
+      .center-circle {
+        height: 25px;
+        width: 25px;
+        left: 40%;
+      }
+      .needle {
+        border-bottom: 40px solid black;
+        &.bad {
+          top: 65px;
+          left: 28%;
+        }
+        &.good {
+          top: 30px;
+          left: 44%;
+        }
+        &.excellent {
+          top: 66px;
+          left: 60%;
+        }
+      }
+    }
+  }
+}
+
+//IPHONE X AND IPHONE PLUS
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .container.report-main {
+    width: 375px;
+  }
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          .inside-inside-chart-text {
+            margin-left: 48%;
+          }
+        }
+      }
+    }
+    .additional-contaminants {
+      .inside-contaminants-text {
+        .inside-inside-chart-text {
+          margin-left: 152%;
+        }
+      }
+    }
+
+    .overall-water-quality {
+      .center-circle {
+        height: 25px;
+        width: 25px;
+        left: 41%;
+      }
+      .needle {
+        border-bottom: 40px solid black;
+        &.bad {
+          top: 65px;
+          left: 31%;
+        }
+        &.good {
+          top: 30px;
+          left: 44%;
+        }
+        &.excellent {
+          top: 66px;
+          left: 60%;
+        }
+      }
+    }
+  }
+}
+
+//REGULAR IPHONE
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  #report {
+    .inorganic-contaminants {
+      .pie-chart-and-text {
+        .inside-chart-text {
+          .inside-inside-chart-text {
+            margin-left: 45%;
+          }
+        }
+      }
+    }
+    .additional-contaminants {
+      .inside-contaminants-text {
+        .inside-inside-chart-text {
+          margin-left: 152%;
+        }
+      }
+    }
+    .overall-water-quality {
+      .center-circle {
+        height: 25px;
+        width: 25px;
+        left: 41%;
+      }
+      .needle {
+        border-bottom: 38px solid black;
+        &.bad {
+          top: 69px;
+          left: 27%;
+        }
+        &.good {
+          top: 30px;
+          left: 44%;
+        }
+        &.excellent {
+          top: 68px;
+          left: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  html {
+    -webkit-print-color-adjust: exact;
+  }
+  .print-appear {
+    display: block;
+  }
+  .print-disappear {
+    display: none;
+  }
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  .pagebreak {
+    page-break-before: always;
+  }
+  .divider {
+    display: none;
+  }
+  .inside-chart .inside-inside-chart {
+    margin-left: 55% !important;
+  }
+  .navbar {
+    display: none;
+  }
+}

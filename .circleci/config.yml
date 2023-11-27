@@ -1,0 +1,78 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.19.00
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:10.16.0
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: rm -rf ./node_modules
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run: yarn test
+
+      # deploy!
+      - run:
+          name: deploy app
+          working_directory: ~/repo
+          command: |
+            MAIN_BUCKET_NAME=""
+            CL_BUCKET_NAME=""
+            BUCKET_REGION="us-east-2"
+
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              MAIN_BUCKET_NAME="s3://varuna-frontend-app"
+              CL_BUCKET_NAME="s3://varunacl-frontend-app"
+            elif [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              MAIN_BUCKET_NAME="s3://varuna-frontend-app-dev"
+              CL_BUCKET_NAME="s3://varunacl-frontend-app-dev"
+            fi
+
+            if [ "$MAIN_BUCKET_NAME" == "" ]; then
+              echo "No need to deploy"
+            else
+              sudo apt-get -y -qq update
+              sudo apt-get install python-pip python-dev build-essential
+              sudo pip install awscli --upgrade
+
+              echo 'export REACT_APP_DEPLOY_HOST="varunaview"' >> $BASH_ENV
+              cat $BASH_ENV
+              source $BASH_ENV
+              yarn build
+              aws s3 rm $MAIN_BUCKET_NAME --recursive
+              aws s3 sync ./build $MAIN_BUCKET_NAME --region $BUCKET_REGION
+
+              echo 'export REACT_APP_DEPLOY_HOST="varunacl"' >> $BASH_ENV
+              cat $BASH_ENV
+              source $BASH_ENV
+              yarn build
+              aws s3 rm $CL_BUCKET_NAME --recursive
+              aws s3 sync ./build $CL_BUCKET_NAME --region $BUCKET_REGION
+            fi

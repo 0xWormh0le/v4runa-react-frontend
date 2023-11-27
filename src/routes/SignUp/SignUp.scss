@@ -1,0 +1,48 @@
+@import 'styles/variables';
+
+.SignUp {
+  .card {
+    max-width: 40em;
+  }
+
+  &__utility-select {
+    .UtilitySelect__option--is-focused {
+      background-color: #f8f9fa;
+
+      &:active {
+        background-color: #999;
+        color: white;
+      }
+    }
+
+    &.is-invalid {
+      .UtilitySelect__control {
+        border-color: $danger;
+      }
+    }
+
+    .UtilitySelect__control {
+      border-radius: 0.4rem;
+      color: $input-focus-color;
+      font-size: small;
+    }
+
+    .UtilitySelect__control--is-focused {
+      border-color: lighten($primary, 10%) !important;
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    }
+
+    .UtilitySelect__loading-indicator {
+      display: none;
+    }
+
+    .UtilitySelect__indicator-separator {
+      display: none;
+    }
+
+    .UtilitySelect__option--is-selected {
+      background-color: #999;
+      color: white;
+    }
+  }
+}

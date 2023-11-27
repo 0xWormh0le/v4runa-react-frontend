@@ -1,0 +1,31 @@
+@import 'styles/variables';
+
+.QualityReport {
+  &__grid {
+    display: grid;
+    margin-bottom: $spacer;
+  }
+
+  &__quality-and-parameter-counter {
+    display: grid;
+    margin: $spacer 0;
+  }
+
+  @include mq($from: desktop) {
+    &__quality-and-parameter {
+      position: fixed !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: calc(100vh - #{$main-header-height} - #{$spacer * 2});
+      max-width: calc((100% - #{$main-sidebar-width}) * 0.33) !important;
+    }
+
+    &__right-pane {
+      padding: $spacer;
+      margin-right: -$spacer;
+      margin-bottom: -$spacer;
+      margin-top: -$spacer;
+      background-color: white;
+    }
+  }
+}

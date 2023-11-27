@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.OverviewMap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &__header {
+    margin-bottom: map-get($spacers, 2);
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__search {
+    max-width: 25em;
+  }
+}
+
+.MapTypeOptions {
+  &__option {
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

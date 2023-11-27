@@ -1,0 +1,18 @@
+@import 'styles/variables';
+
+.MobileFooter {
+  height: $main-header-height;
+  background: $mobile-footer-bg-color;
+  padding-right: 6% !important;
+  padding-left: 6% !important;
+  transition: ease 1s box-shadow;
+
+  &--shadow {
+    box-shadow: 0 -0.125rem 0.25rem rgba($black, 0.075);
+  }
+
+  &__icon {
+    font-size: 42px;
+    color: $main-header-icon-color;
+  }
+}

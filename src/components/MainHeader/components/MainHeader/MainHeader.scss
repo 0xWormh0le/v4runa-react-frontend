@@ -1,0 +1,29 @@
+@import 'styles/variables';
+
+.MainHeader {
+  min-height: $main-header-height;
+  background-color: $main-header-bg-color;
+  align-items: center;
+  padding: map-get($spacers, 3);
+  transition: ease 0.5s box-shadow;
+
+  @include mq($until: tablet) {
+    background-color: $main-sidebar-bg-color;
+  }
+
+  &--shadow {
+    box-shadow: $box-shadow-sm;
+
+    @include mq($until: tablet) {
+      box-shadow: 0 0.125rem 0.25rem rgba($black, 0.4);
+    }
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(236, 236, 238, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-light .navbar-toggler {
+  border: none !important;
+}

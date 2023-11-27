@@ -1,0 +1,53 @@
+@import 'styles/variables';
+
+@mixin col {
+  flex-basis: 0 !important;
+  flex-grow: 1 !important;
+  max-width: 100% !important;
+}
+
+@mixin fixed-widget($width) {
+  flex-grow: 0 !important;
+  flex-shrink: 0;
+  flex-basis: $width !important;
+}
+
+.Finances {
+  &__row-spacer {
+    margin: -$spacer * 0.5 0;
+  }
+
+  &__col-spacer {
+    padding: $spacer * 0.5 0;
+  }
+
+  &__row-bottom {
+    margin-top: $spacer * 0.5;
+  }
+
+  &__table-scroll {
+    overflow: auto;
+  }
+
+  &__expense-comparison {
+    @include mq($from: mobile, $until: tablet) {
+      @include col;
+    }
+
+    @include mq($from: desktop) {
+      @include col;
+    }
+  }
+
+  &__budget-cost {
+    height: 20rem;
+
+    @include mq($from: desktop) {
+      @include fixed-widget(20em);
+    }
+
+    @include mq($from: mobile, $until: tablet) {
+      @include fixed-widget(20em);
+    }
+  }
+}

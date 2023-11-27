@@ -1,0 +1,76 @@
+// Legacy variables
+$primaryblue: #273091;
+$yellow: #e5a82d;
+$lightyellow: #e8bd68;
+$blue: #1d87b5;
+$lightblue: #7ecaea;
+$red: #9e573d;
+$lightred: #d6a28f;
+$dangerred: #ce452d;
+
+// New variables
+$blue-primary: #0088b2;
+$blue-secondary: #00a6d3;
+$yellow: #f5a335;
+$green: #74a242;
+$red: #da693e;
+$magenta: #c73c5c;
+$teal: #009396;
+$blue-dark: #23628d;
+$lightgrey: #bbb;
+$text-grey-1: #333333;
+$text-grey-2: #6b6b6b;
+$grey-background: #e6e7e9;
+$lightgrey-text: #949599;
+$money-green: #73a241;
+$component-grey-border: #999;
+
+$icon-info: #00a6d3;
+$icon-error: #f5b835;
+$icon-serious: #ee6b00;
+$icon-critical: #bd290f;
+$icon-cog: #74a23f;
+
+@import 'twbs-overrides/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'sass-mq';
+
+$mq-breakpoints: (
+  mobile: 576px,
+  tablet: 768px,
+  desktop: 992px,
+  wide: 1200px,
+  xlarge: 1600px
+);
+
+// Custom variables
+$main-sidebar-width: 210px;
+$main-sidebar-bg-color: #3e3e3f;
+$main-sidebar-hover-color: #353536;
+$main-sidebar-text-color: #bcbdc0;
+
+$main-header-bg-color: #ffffff;
+$main-header-height: 75px;
+$main-header-icon-color: #bcbdc1;
+
+$mobile-footer-bg-color: #ffffff;
+
+$map-icon-size: 1.5rem;
+
+$component-title-size: 16px;
+$component-sub-title-size: 13px;
+$component-big-text: 21px;
+$component-small-text: 11px;
+$component-title: #6f7072;
+$component-sub-title: #0188b2;
+$component-header-divider-size: $font-size-lg;
+$component-header-divider-weight: 400;
+$component-icon-size: 17px;
+
+$body-color-darker: #57585a;
+$typography-figure-color: #000002;
+
+$slick-font-path: '~slick-carousel/slick/fonts/';
+$slick-loader-path: '~slick-carousel/slick/';

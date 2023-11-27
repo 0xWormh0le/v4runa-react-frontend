@@ -1,0 +1,64 @@
+@import 'styles/variables';
+
+.TechnicianSlider {
+  padding: 0 $spacer * 2;
+
+  &__card {
+    padding: $spacer * 0.5;
+
+    .card {
+      cursor: pointer;
+      transition: ease 0.5s opacity, ease 0.5s border;
+
+      &:hover {
+        opacity: 1;
+        border: 1px solid gray;
+      }
+    }
+
+    &--disabled {
+      opacity: 0.5;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-header-check-icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    &-avatar {
+      padding: $spacer * 0.5;
+      background-color: $grey-background;
+      display: flex;
+      margin: $spacer * 0.5 0;
+      align-items: center;
+    }
+
+    &-avatar-image {
+      margin-right: $spacer * 0.5;
+      min-width: 4em;
+      height: 4em;
+      border-radius: 50%;
+      background-color: darken($grey-background, 20%);
+    }
+
+    &-avatar-name {
+      color: $blue-primary;
+    }
+
+    &-field {
+      display: flex;
+      line-height: 2em;
+      justify-content: space-between;
+    }
+
+    &-field--value {
+      color: $text-grey-1;
+    }
+  }
+}

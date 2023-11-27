@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+.TechnicianItem {
+  background: $grey-background;
+  padding: 10px;
+  margin-bottom: 10px;
+  &__image {
+    max-height: 60px;
+  }
+  &__name {
+    color: $component-sub-title;
+  }
+  &__type {
+  }
+  &__status {
+    font-weight: bold;
+    font-size: $component-sub-title-size;
+    color: $component-title;
+  }
+
+  &:first-child {
+    margin-top: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  h4 {
+    margin-bottom: 0px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}

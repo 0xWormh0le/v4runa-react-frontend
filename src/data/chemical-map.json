@@ -1,0 +1,18 @@
+[
+  { "longitude": -97.3308, "latitude": 32.7732, "type": "chemical", "value": 0 },
+  { "longitude": -98.454, "latitude": 29.43, "type": "chemical", "value": 0 },
+  { "longitude": -96.6689, "latitude": 33.0188, "type": "chemical", "value": 38 },
+  { "longitude": -96.737, "latitude": 32.7757, "type": "chemical", "value": 0 },
+  { "longitude": -98.4636, "latitude": 29.4211, "type": "chemical", "value": 0 },
+  { "longitude": -96.6489, "latitude": 33.0148, "type": "chemical", "value": 0 },
+  { "longitude": -97.1181, "latitude": 32.7762, "type": "chemical", "value": 14 },
+  { "longitude": -97.3408, "latitude": 32.7782, "type": "chemical", "value": 5 },
+  { "longitude": -96.9429, "latitude": 32.834, "type": "chemical", "value": 22 },
+  { "longitude": -96.6939, "latitude": 33.0168, "type": "chemical", "value": 0 },
+  { "longitude": -95.339, "latitude": 29.46, "type": "chemical", "value": 10 },
+  { "longitude": -98.4636, "latitude": 29.4801, "type": "chemical", "value": 3 },
+  { "longitude": -97.3864, "latitude": 27.8056, "type": "chemical", "value": 0 },
+  { "longitude": -95.359, "latitude": 29.76, "type": "chemical", "value": 23 },
+  { "longitude": -96.6929, "latitude": 33.0168, "type": "chemical", "value": 22 },
+  { "longitude": -98.495, "latitude": 29.41, "type": "chemical", "value": 13 }
+]

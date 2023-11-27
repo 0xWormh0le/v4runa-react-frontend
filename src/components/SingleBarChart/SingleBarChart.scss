@@ -1,0 +1,212 @@
+@import 'styles/variables';
+
+.SingleBarChart {
+  text-align: center;
+
+  &__bar {
+    &.inorganic {
+      background: $yellow;
+      left: 30%;
+      &.three {
+        left: 35%;
+      }
+      &.two {
+        left: 40%;
+      }
+      &.one {
+        left: 45%;
+      }
+    }
+    &.disinfectants {
+      background: $blue;
+      left: 50px;
+      &.three {
+        left: 35%;
+      }
+      &.two {
+        left: 40%;
+      }
+      &.one {
+        left: 45%;
+      }
+    }
+    &.lead-and-copper {
+      background: $red;
+      left: 40%;
+      &.one {
+        left: 45%;
+      }
+    }
+    &.disinfectantsResidual {
+      background: $blue;
+      left: 43%;
+    }
+    z-index: 2;
+    width: 45px;
+    position: absolute;
+    bottom: 0px;
+
+    .level-detected {
+      color: white;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      z-index: 3;
+      font-weight: bold;
+    }
+  }
+
+  &__bar2 {
+    &.inorganic {
+      background: $lightyellow;
+      left: calc(30% + 12px);
+      &.three {
+        left: calc(35% + 12px);
+      }
+      &.two {
+        left: calc(40% + 12px);
+      }
+      &.one {
+        left: calc(45% + 12px);
+      }
+    }
+    &.disinfectants {
+      background: $lightblue;
+      left: 65px;
+      &.three {
+        left: calc(35% + 12px);
+      }
+      &.two {
+        left: calc(40% + 12px);
+      }
+      &.one {
+        left: calc(45% + 12px);
+      }
+    }
+    &.lead-and-copper {
+      background: $lightred;
+      left: calc(40% + 12px);
+      &.one {
+        left: calc(45% + 12px);
+      }
+    }
+    &.disinfectantsResidual {
+      background: $lightblue;
+      left: 47%;
+    }
+    z-index: 1;
+    width: 45px;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  @include mq($until: desktop) {
+    &__bar {
+      &.inorganic {
+        left: 23%;
+      }
+    }
+    &__bar2 {
+      &.inorganic {
+        left: calc(23% + 12px);
+      }
+    }
+  }
+
+  @include mq($until: tablet) {
+    &__bar {
+      width: 35px;
+      &.inorganic {
+        &.three {
+          left: 24%;
+        }
+        &.one {
+          left: 43%;
+        }
+      }
+      &.disinfectants {
+        &.two {
+          left: 33%;
+        }
+      }
+      &.lead-and-copper {
+        &.one {
+          left: 43%;
+        }
+      }
+    }
+    &__bar2 {
+      width: 35px;
+
+      &.inorganic {
+        &.three {
+          left: calc(24% + 12px);
+        }
+        &.one {
+          left: calc(43% + 12px);
+        }
+      }
+      &.disinfectants {
+        &.two {
+          left: calc(33% + 12px);
+        }
+      }
+      &.lead-and-copper {
+        &.one {
+          left: calc(43% + 12px);
+        }
+      }
+    }
+  }
+
+  @include mq($until: mobile) {
+    &__bar {
+      width: 35px;
+
+      &.inorganic {
+        left: 9%;
+        &.one {
+          left: 40%;
+        }
+        &.two {
+          left: 30%;
+        }
+      }
+      &.disinfectants {
+        &.three {
+          left: 23%;
+        }
+      }
+      &.lead-and-copper {
+        left: 30%;
+        &.one {
+          left: 41%;
+        }
+      }
+    }
+    &__bar2 {
+      width: 35px;
+
+      &.inorganic {
+        left: calc(9% + 12px);
+        &.one {
+          left: calc(40% + 12px);
+        }
+        &.two {
+          left: calc(30% + 12px);
+        }
+      }
+      &.disinfectants {
+        &.three {
+          left: calc(23% + 12px);
+        }
+      }
+      &.lead-and-copper {
+        left: calc(30% + 12px);
+        &.one {
+          left: calc(41% + 12px);
+        }
+      }
+    }
+  }
+}

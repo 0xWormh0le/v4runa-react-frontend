@@ -1,0 +1,106 @@
+@import 'styles/variables';
+
+@keyframes ripple {
+  0% {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    left: -30px;
+    right: -30px;
+    top: -30px;
+    bottom: -30px;
+    opacity: 0;
+  }
+}
+
+.UtilityMap {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $component-grey-border;
+
+  &__marker {
+    color: $icon-error;
+    font-size: $map-icon-size;
+    transform: translate(-50%, -50%);
+
+    &--alert {
+      color: $lightgrey;
+      cursor: pointer;
+    }
+
+    &--alert:hover {
+      color: $lightyellow;
+    }
+
+    &--alert-selected {
+      color: $yellow;
+    }
+
+    &--sensorNormal {
+      color: $green;
+    }
+
+    &--sensorAbnormal {
+      color: $yellow;
+    }
+
+    &--technician {
+      color: $lightgrey-text;
+      cursor: pointer;
+    }
+
+    &--technician:hover {
+      color: $blue-secondary;
+    }
+
+    &--technician-selected {
+      color: $blue-primary;
+    }
+
+    &--chemical {
+      cursor: pointer;
+      transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    &--chemical:hover {
+      border-color: $yellow !important;
+      background-color: $lightyellow !important;
+
+      div {
+        background-color: inherit !important;
+      }
+    }
+
+    &--chemical-selected {
+      border-color: darken($yellow, 15%) !important;
+      background-color: $yellow !important;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: ' ';
+        position: absolute;
+        border: 1px solid $yellow;
+        border-radius: 100%;
+      }
+
+      &:before {
+        animation: ripple 1s linear infinite;
+      }
+
+      &:after {
+        animation: ripple 1s linear 0.5s infinite;
+      }
+
+      div {
+        background-color: inherit !important;
+      }
+    }
+  }
+}

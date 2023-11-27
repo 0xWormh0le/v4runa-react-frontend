@@ -1,0 +1,73 @@
+@import 'styles/variables';
+
+.Login {
+  background-image: url('../../images/varuna-background.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  display: flex;
+
+  @include mq($until: mobile) {
+    padding: 0;
+  }
+
+  &__card {
+    padding: $spacer * 2.5;
+    width: 100%;
+    margin: auto;
+    max-width: 25em;
+
+    @include mq($until: mobile) {
+      padding: $spacer;
+      margin: 0;
+      position: absolute !important;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      max-width: inherit;
+    }
+  }
+
+  &__logo {
+    margin-bottom: $spacer * 2;
+    width: 100%;
+    height: 2.5rem;
+  }
+
+  &__left-arrow {
+    font-size: 0.5em;
+  }
+
+  input[type='input'],
+  input[type='email'],
+  input[type='password'] {
+    border-radius: 0.4rem;
+    height: 2.5rem;
+  }
+
+  textarea.form-control {
+    border-radius: 0.4rem;
+    height: 10em;
+  }
+
+  .btn {
+    height: 2.5rem;
+    width: $spacer * 6;
+  }
+
+  .form-label {
+    font-size: small;
+    margin-bottom: 0.2em;
+    margin-left: 0.5em;
+  }
+
+  &__loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+  }
+}

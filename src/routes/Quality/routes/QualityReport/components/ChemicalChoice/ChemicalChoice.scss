@@ -1,0 +1,91 @@
+@import 'styles/variables';
+
+.ChemicalChoice {
+  position: relative;
+  display: inline-block;
+  margin: -$spacer * 0.25;
+
+  &__chemical {
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.3s ease;
+    width: 2rem;
+    height: 2rem;
+    margin: $spacer * 0.25;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__inorganic-contaminants {
+    &.active {
+      color: $yellow;
+    }
+
+    &:hover {
+      color: lighten($yellow, 20%);
+    }
+  }
+
+  &__disinfectants {
+    &.active {
+      color: $blue;
+    }
+
+    &:hover {
+      color: lighten($blue, 20%);
+    }
+  }
+
+  &__lead-copper {
+    &.active {
+      color: $red;
+    }
+
+    &:hover {
+      color: lighten($red, 20%);
+    }
+  }
+
+  &__organic-chemical-contaminants {
+    &.active {
+      color: $green;
+    }
+
+    &:hover {
+      color: lighten($green, 20%);
+    }
+  }
+
+  &__pesticides-herbicides {
+    &.active {
+      color: $teal;
+    }
+
+    &:hover {
+      color: lighten($teal, 20%);
+    }
+  }
+
+  &__radioactive-contaminants {
+    &.active {
+      color: $magenta;
+    }
+
+    &:hover {
+      color: lighten($magenta, 20%);
+    }
+  }
+
+  &__microbial-contaminants {
+    &.active {
+      color: $blue-dark;
+    }
+
+    &:hover {
+      color: lighten($blue-dark, 20%);
+    }
+  }
+}

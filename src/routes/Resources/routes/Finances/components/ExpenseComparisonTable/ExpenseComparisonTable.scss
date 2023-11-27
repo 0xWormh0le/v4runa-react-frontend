@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.ExpenseComparisonTable {
+  thead tr th {
+    border-top: none;
+  }
+
+  &__positive {
+    color: $blue-primary;
+  }
+
+  &__negative {
+    color: $red;
+  }
+
+  &__expense {
+    color: $typography-figure-color;
+
+    &--positive {
+      color: $green;
+    }
+
+    &--negative {
+      color: $magenta;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import 'styles/shared';
+
+.ContaminantsDoughnut {
+  position: relative;
+  width: 100%;
+
+  &__text {
+    width: 84px;
+    text-align: center;
+    @include vhcenter;
+  }
+
+  &__chart {
+    max-width: 150px;
+    position: relative;
+    margin: auto;
+  }
+}

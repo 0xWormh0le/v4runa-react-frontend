@@ -1,0 +1,15 @@
+@import 'styles/variables';
+
+#contact {
+  label {
+    color: grey;
+  }
+  input[type='text']:focus {
+    border-bottom: 1px solid $blue;
+    box-shadow: 0 1px 0 0 $blue;
+  }
+  textarea[type='text']:focus {
+    border-bottom: 1px solid $blue;
+    box-shadow: 0 1px 0 0 $blue;
+  }
+}

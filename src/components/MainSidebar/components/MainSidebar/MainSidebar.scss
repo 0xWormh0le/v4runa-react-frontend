@@ -1,0 +1,11 @@
+@import 'styles/variables';
+
+.MainSidebar {
+  width: $main-sidebar-width;
+  background-color: $main-sidebar-bg-color;
+  color: $main-sidebar-text-color;
+  height: max-content;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1100;
+}

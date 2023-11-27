@@ -1,0 +1,11 @@
+@import 'styles/variables';
+
+.SubPrognosisSecond {
+  &__row-spacer {
+    margin: -$spacer * 0.5 0;
+  }
+
+  &__col-spacer {
+    padding: $spacer * 0.5 0;
+  }
+}

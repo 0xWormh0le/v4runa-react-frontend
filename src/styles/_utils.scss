@@ -1,0 +1,76 @@
+// legacy utils
+
+.lightblue {
+  color: #0085ba;
+}
+.yellow {
+  color: $yellow;
+}
+.yellowbackground {
+  background: $yellow;
+}
+.green {
+  color: #579107;
+}
+.greenbackground {
+  background: #579107;
+}
+.blue {
+  color: $blue;
+}
+.bluebackground {
+  background: $blue;
+}
+.bluegreen {
+  color: #098e7f;
+}
+.bluegreenbackground {
+  background: #098e7f;
+}
+.red {
+  color: $red;
+}
+.redbackground {
+  background: $red;
+}
+.darkred {
+  color: #af084b;
+}
+.darkredbackground {
+  background: #af084b;
+}
+.darkblue {
+  color: #23406d;
+}
+.darkbluebackground {
+  background: #23406d;
+}
+
+.small-text {
+  font-size: 13px;
+}
+.smaller-text {
+  font-size: 11px;
+}
+.super-small-text {
+  margin-top: -5px;
+  font-size: 9px;
+  line-height: normal;
+}
+
+// New Utils
+.text-blue {
+  color: $blue;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-grey-1 {
+  color: $text-grey-1;
+}
+
+.text-grey-2 {
+  color: $text-grey-2;
+}

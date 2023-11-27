@@ -1,0 +1,43 @@
+@import 'styles/variables';
+
+.AlertLog {
+  $this: &;
+
+  height: 100%;
+  padding: $spacer * 0.8;
+
+  &__item:not(:last-child) {
+    margin-bottom: $spacer * 0.5;
+  }
+
+  &__item--active {
+    svg {
+      color: $green;
+    }
+
+    &__item-title {
+      color: $green;
+    }
+
+    &.alert--warning {
+      svg,
+      #{$this}__item-title {
+        color: $icon-error;
+      }
+    }
+
+    &.alert--serious {
+      svg,
+      #{$this}__item-title {
+        color: $icon-serious;
+      }
+    }
+
+    &.alert--critical {
+      svg,
+      #{$this}__item-title {
+        color: $icon-critical;
+      }
+    }
+  }
+}

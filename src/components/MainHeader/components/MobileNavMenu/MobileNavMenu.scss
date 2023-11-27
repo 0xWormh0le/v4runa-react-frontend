@@ -1,0 +1,68 @@
+@import 'styles/variables';
+
+.MobileNavMenu {
+  margin-top: 28px;
+
+  &__text {
+    display: inline-flex;
+  }
+
+  &__tab {
+    a {
+      text-decoration: none !important;
+    }
+
+    label {
+      width: 100%;
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  &__tab-highlight {
+    color: $main-sidebar-text-color;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 25px;
+
+    &:hover {
+      cursor: pointer;
+      background: $main-sidebar-hover-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+    margin-bottom: 3px;
+    font-size: 2rem;
+  }
+
+  input:checked ~ .submenu {
+    display: block;
+    max-height: 210px;
+  }
+
+  .submenu {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-out;
+
+    &__item {
+      color: $main-sidebar-text-color;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-left: 75px;
+      line-height: 0.8;
+
+      h4 {
+        margin: 0px;
+        line-height: 1;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: $main-sidebar-hover-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "contaminant": "Lead",
+    "epa": 69,
+    "trend": "0.9ppb",
+    "sign": true
+  },
+  {
+    "contaminant": "Flouride",
+    "epa": 75,
+    "trend": "3ppm",
+    "sign": false
+  },
+  {
+    "contaminant": "Copper",
+    "epa": 66,
+    "trend": "40ppb",
+    "sign": true
+  },
+  {
+    "contaminant": "Chlorine",
+    "epa": 89,
+    "trend": ".03ppm",
+    "sign": true
+  },
+  {
+    "contaminant": "Bromine",
+    "epa": 75,
+    "trend": "3ppm",
+    "sign": false
+  }
+]

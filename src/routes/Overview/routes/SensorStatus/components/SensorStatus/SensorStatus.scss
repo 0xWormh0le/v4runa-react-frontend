@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.SensorStatus {
+  position: relative;
+
+  &__row-spacer {
+    margin: -$spacer * 0.5 0;
+  }
+
+  &__col-spacer {
+    padding: $spacer * 0.5 0;
+  }
+
+  &__chemical-name {
+    color: $blue;
+  }
+
+  &__alert {
+    max-height: 35em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mq($from: xlarge) {
+    .EnergyUsage__legend {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__control-button.btn {
+    flex: 1 1 33%;
+    @include button-variant($magenta, $magenta);
+  }
+}

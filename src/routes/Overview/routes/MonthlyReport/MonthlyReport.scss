@@ -1,0 +1,62 @@
+@import 'styles/variables';
+
+.MonthlyReport {
+  &__container {
+    margin: -$spacer * 0.5;
+    display: grid;
+
+    @include mq($until: mobile) {
+      grid-template-columns: 100%;
+    }
+
+    @include mq($from: mobile) {
+      grid-template-columns: 50% 50%;
+    }
+
+    @include mq($from: wide) {
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    @include mq($from: xlarge) {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
+
+  &__report {
+    padding: $spacer * 0.5;
+  }
+
+  &__report-body {
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: $spacer * 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__report-content {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &:hover {
+      color: $blue-dark;
+      text-decoration: none;
+    }
+  }
+
+  &__file-icon {
+    font-size: 3em;
+  }
+
+  &__download {
+    font-size: 2em;
+    color: inherit;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}

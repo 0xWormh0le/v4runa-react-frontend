@@ -1,0 +1,9 @@
+{
+  "unscheduledRepairs": 23401,
+  "scheduledRepairs": 68391,
+  "projectedCost": 6000,
+  "unscheduledCost": 740,
+  "allocatedBudget": 100000,
+  "totalPercent": 0.22,
+  "totalBudget": 8208
+}

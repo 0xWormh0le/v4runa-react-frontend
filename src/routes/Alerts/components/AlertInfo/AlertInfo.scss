@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.AlertInfo {
+  &__title {
+    color: $yellow;
+    text-transform: none;
+    margin-bottom: $spacer;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $spacer * 0.5;
+  }
+
+  &__field-value {
+    color: $typography-figure-color;
+  }
+}

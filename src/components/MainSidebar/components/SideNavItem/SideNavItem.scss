@@ -1,0 +1,67 @@
+@import 'styles/variables';
+
+.SideNavItem {
+  $this: &;
+
+  &__link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    background: inherit;
+    color: $main-sidebar-text-color;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 25px;
+    text-decoration: none !important;
+
+    &:hover,
+    &.selected {
+      color: $main-sidebar-text-color;
+      background: $main-sidebar-hover-color;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    font-family: $headings-font-family;
+    font-weight: 500;
+  }
+
+  &__icon {
+    margin-right: map-get($spacers, 4);
+    margin-bottom: 3px;
+    font-size: 2rem;
+  }
+
+  &__sub-menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-out;
+    will-change: max-height;
+
+    &__active {
+      background: $main-sidebar-hover-color;
+    }
+
+    &-item {
+      background: inherit;
+      color: $main-sidebar-text-color;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 75px;
+      font-size: $font-size-xs;
+      font-family: $headings-font-family;
+      cursor: pointer;
+
+      &:hover {
+        background: $main-sidebar-hover-color;
+      }
+    }
+  }
+
+  &__sub-menu.open,
+  > .selected + #{$this}__sub-menu {
+    max-height: 245px;
+  }
+}

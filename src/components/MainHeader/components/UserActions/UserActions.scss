@@ -1,0 +1,8 @@
+@import 'styles/variables';
+
+.UserActions {
+  margin-right: 1vw;
+  &:hover {
+    cursor: pointer;
+  }
+}

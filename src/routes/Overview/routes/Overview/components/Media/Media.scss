@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+.Media {
+  &__title {
+    color: $component-title;
+  }
+  &__arrow-carrot-right {
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    color: $component-title;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  &__news-title {
+    color: $component-sub-title;
+  }
+  &__news-date {
+    color: $component-title;
+  }
+  &__news-text {
+    color: $component-title;
+  }
+  &__news-read-more {
+  }
+}

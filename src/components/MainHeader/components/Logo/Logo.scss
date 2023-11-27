@@ -1,0 +1,11 @@
+@import 'styles/variables';
+
+.MobileViewLogo {
+  img {
+    height: 29px;
+    position: relative;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

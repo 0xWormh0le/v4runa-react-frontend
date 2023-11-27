@@ -1,0 +1,64 @@
+@import 'styles/variables';
+
+.Datepicker {
+  &__calendar-header {
+    display: flex;
+    justify-content: center;
+
+    * {
+      margin: 0 2px;
+    }
+
+    button {
+      border-radius: 7px;
+      border-style: solid;
+      border-width: 1px;
+      @include button-variant($blue-primary, $blue-primary);
+    }
+  }
+
+  .react-datepicker {
+    border-radius: 0.5rem;
+    box-shadow: 0px 10px 20px 0px #0003;
+    border-color: #fff;
+    border-width: 2px;
+  }
+
+  .react-datepicker__header {
+    border-bottom: 0;
+  }
+
+  .react-datepicker__triangle {
+    left: 80%;
+
+    &:before {
+      border-top-color: white !important;
+      border-bottom-color: white !important;
+    }
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker__day {
+    border-radius: 50%;
+
+    &--selected {
+      background-color: $blue-primary;
+    }
+
+    &:hover {
+      border-radius: 50%;
+    }
+  }
+
+  .react-datepicker-wrapper .dropdown-menu {
+    display: none !important;
+  }
+
+  .react-datepicker-popper {
+    margin-top: 2px;
+    z-index: 1100;
+  }
+}

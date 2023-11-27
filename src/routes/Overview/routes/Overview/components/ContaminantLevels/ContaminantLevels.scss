@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.ContaminantLevels {
+  margin-bottom: 15px;
+  &__title-container {
+    margin-bottom: 10px;
+  }
+  &__col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__header-divider {
+    color: $component-title;
+    font-weight: $component-header-divider-weight;
+    font-size: $component-header-divider-size;
+  }
+  &__divider {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  &__header-text {
+    color: $component-title;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}

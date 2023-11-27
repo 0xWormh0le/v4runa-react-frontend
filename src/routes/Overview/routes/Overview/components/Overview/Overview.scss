@@ -1,0 +1,22 @@
+@import 'styles/variables';
+
+.Overview {
+  position: relative;
+
+  &__row-spacer {
+    margin: -$spacer * 0.5 0;
+  }
+
+  &__col-spacer {
+    padding: $spacer * 0.5 0;
+  }
+
+  @include mq($from: xlarge) {
+    & &__contaminant-levels,
+    & &__technicians {
+      flex: 0 0 50%;
+      max-width: 50%;
+      width: 50%;
+    }
+  }
+}

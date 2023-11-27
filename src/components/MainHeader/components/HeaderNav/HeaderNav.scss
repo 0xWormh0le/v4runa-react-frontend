@@ -1,0 +1,19 @@
+@import 'styles/variables';
+
+.HeaderNav {
+  margin-right: 2vw;
+  &__question-icon {
+    color: $main-header-icon-color;
+    font-size: 22px;
+    margin-right: 2vw;
+  }
+  &__mail-icon {
+    color: $main-header-icon-color;
+    font-size: 27px;
+    margin-right: 2vw;
+  }
+  &__bell-icon {
+    color: $main-header-icon-color;
+    font-size: 27px;
+  }
+}

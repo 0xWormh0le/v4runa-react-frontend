@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.MainLayout {
+  display: flex;
+  min-height: fit-content;
+
+  &__body {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    flex-direction: column;
+
+    @include mq($from: tablet) {
+      margin-left: $main-sidebar-width;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: map-get($spacers, 3);
+    margin-top: $main-header-height;
+
+    @include mq($until: tablet) {
+      margin-bottom: $main-header-height;
+    }
+  }
+}

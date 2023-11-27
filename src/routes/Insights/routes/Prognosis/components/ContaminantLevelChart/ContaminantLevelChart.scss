@@ -1,0 +1,15 @@
+@import 'styles/variables';
+
+.ContaminantLevelChart {
+  &__chart-wrapper {
+    flex-grow: 1;
+
+    & > div {
+      height: 100%;
+    }
+
+    .highcharts-cotainer {
+      height: 100%;
+    }
+  }
+}

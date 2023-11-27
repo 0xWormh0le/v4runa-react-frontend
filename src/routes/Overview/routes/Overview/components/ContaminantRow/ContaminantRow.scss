@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.ContaminantRow {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  &__contaminant {
+    color: $component-title;
+    font-size: $component-title-size;
+  }
+  &__epa {
+  }
+  &__trend {
+  }
+  &__down-arrow {
+    color: red;
+  }
+  &__up-arrow {
+    color: green;
+  }
+}

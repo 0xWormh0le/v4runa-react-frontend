@@ -1,0 +1,9 @@
+@import 'styles/variables';
+
+.AssetLegend {
+  &__legend-item {
+    min-width: $spacer * 0.7;
+    height: $spacer * 0.7;
+    margin-right: $spacer * 0.5;
+  }
+}

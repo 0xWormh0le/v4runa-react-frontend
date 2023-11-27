@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.Measurements {
+  &__table {
+    width: 100%;
+
+    tr {
+      line-height: 1;
+
+      td {
+        padding-top: $spacer * 0.5;
+      }
+    }
+  }
+
+  &__status {
+    &--received {
+      color: $green;
+    }
+
+    &--not-received {
+      color: $yellow;
+    }
+  }
+}

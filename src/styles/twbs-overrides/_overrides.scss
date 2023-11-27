@@ -1,0 +1,27 @@
+.btn {
+  align-items: center;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  font-size: small;
+}
+
+a.btn[type='button'] {
+  appearance: none;
+}
+
+.form-control {
+  font-size: small;
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.card {
+  box-shadow: $box-shadow-sm;
+}
+
+input[type='text'] {
+  border-radius: 0.5rem;
+  border-color: $component-grey-border;
+}

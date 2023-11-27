@@ -1,0 +1,88 @@
+@import 'styles/variables';
+
+$legend-width: 160px;
+
+.SensorRecordsChart {
+  display: flex;
+  height: 100%;
+  position: relative;
+
+  &__legend {
+    border-radius: $spacer * 0.5;
+    border: 1px solid $lightgrey-text;
+    margin-right: $spacer;
+    padding: $spacer * 0.5 $spacer;
+    min-width: $legend-width;
+    height: fit-content;
+  }
+
+  &__legend-color {
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    min-width: 1em;
+    height: 1em;
+    padding: 3px;
+    margin-right: $spacer * 0.5;
+  }
+
+  &__chart {
+    flex-grow: 1;
+    height: 300px;
+    min-width: 0;
+
+    .chartjs-render-monitor {
+      position: absolute;
+      z-index: 1;
+    }
+    
+    @include mq($from: wide) {
+      min-height: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__chart-annotation {
+    border-width: 2px;
+    border-style: solid;
+    position: absolute;
+    border-left: 0;
+    border-right: 0;
+    padding: $spacer * 0.5 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: ease .5s bottom, ease .5s top;
+
+    .Typography {
+      max-width: $legend-width;
+    }
+
+    &--red {
+      border-color: $magenta;
+
+      .Typography {
+        color: $magenta;
+      }
+    }
+
+    &--green {
+      border-color: $teal;
+
+      .Typography {
+        color: $teal;
+      }
+    }
+
+    &--border-bottom {
+      border-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  
+    &--border-top {
+      border-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import 'styles/variables';
+
+.Typography {
+  $this: &;
+
+  &--title {
+    font-weight: 500;
+    font-size: $font-size-base * 1.5;
+  }
+
+  &--subtitle {
+    font-weight: 500;
+    font-size: $font-size-lg;
+  }
+
+  &--caption {
+    font-weight: 500;
+    font-size: $font-size-sm;
+    font-family: $headings-font-family;
+  }
+
+  &--figure-small {
+    font-weight: 500;
+    color: $typography-figure-color;
+    font-size: $font-size-base * 0.75;
+  }
+
+  &--figure-large {
+    font-weight: 500;
+    color: $typography-figure-color;
+    font-size: $font-size-lg;
+  }
+
+  &--body {
+    font-weight: 400;
+    font-size: $font-size-base;
+  }
+
+  &--body-xlarge {
+    font-weight: 400;
+    color: $body-color-darker;
+    font-size: $font-size-xl;
+  }
+
+  &--body-large {
+    font-weight: 400;
+    color: $body-color-darker;
+    font-size: $font-size-lg;
+  }
+
+  &--body-small {
+    font-weight: 400;
+    font-size: $font-size-sm;
+  }
+
+  &--body-xxsmall {
+    font-weight: 400;
+    font-size: $font-size-xs;
+  }
+
+  &--body-xxs {
+    font-weight: 400;
+    font-size: $font-size-xxs;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &:not(#{$this}--mb) {
+    margin-bottom: 0;
+  }
+}

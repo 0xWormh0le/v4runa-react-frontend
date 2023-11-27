@@ -1,0 +1,72 @@
+@import 'styles/variables';
+
+.Alerts {
+  margin: -$spacer;
+  padding: $spacer;
+
+  @include mq($from: wide) {
+    height: calc(100vh - #{$main-header-height});
+  }
+
+  &__row-spacer {
+    margin: -$spacer * 0.5 0;
+  }
+
+  &__col-spacer {
+    padding: $spacer * 0.5 0;
+  }
+
+  &__left-pane {
+    @include mq($from: wide) {
+      height: 100%;
+    }
+  }
+
+  &__map {
+    height: 400px;
+
+    @include mq($from: wide) {
+      height: 50%;
+    }
+  }
+
+  &__log {
+    @include mq($until: wide) {
+      max-height: 400px;
+    }
+
+    @include mq($from: wide) {
+      height: 50%;
+    }
+  }
+
+  &__right-pane {
+    background-color: white;
+    padding: $spacer;
+    margin-top: -$spacer;
+    margin-bottom: -$spacer;
+    margin-right: -$spacer;
+
+    @include mq($from: wide) {
+      height: calc(100vh - #{$main-header-height});
+    }
+
+    @include mq($until: wide) {
+      margin-top: 0;
+      margin-left: -$spacer;
+    }
+  }
+
+  &__measurement {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($until: wide) {
+      max-height: 700px;
+    }
+
+    @include mq($from: wide) {
+      height: 100%;
+    }
+  }
+}

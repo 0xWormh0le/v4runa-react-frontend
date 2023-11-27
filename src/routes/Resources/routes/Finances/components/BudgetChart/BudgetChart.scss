@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.BudgetChart {
+  &__date-picker {
+    width: 8em;
+  }
+
+  &__legend {
+    max-width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  &__legend-color {
+    margin-right: 0.5em;
+    min-width: $spacer * 0.7;
+    height: $spacer * 0.7;
+  }
+
+  &__chart {
+    flex-grow: 1;
+    min-width: 0;
+  }
+}

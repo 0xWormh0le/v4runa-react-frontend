@@ -1,0 +1,16 @@
+@import 'styles/variables';
+
+.FooterUserActions {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    color: $main-header-icon-color;
+    font-size: 42px;
+  }
+  
+  &__arrow::after {
+    display: none !important;
+  }
+}

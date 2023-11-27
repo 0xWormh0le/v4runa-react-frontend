@@ -1,0 +1,45 @@
+@import 'styles/variables';
+
+.Status {
+  $this: &;
+
+  height: 100%;
+
+  &__urgent {
+    color: $magenta;
+  }
+
+  &__alert-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__alert-status {
+    margin-right: $spacer * 0.5;
+  }
+
+  &__alert-icon {
+    margin-right: $spacer * 0.3;
+  }
+
+  &__alert {
+    svg,
+    #{$this}__alert-status {
+      color: $icon-error;
+    }
+  }
+
+  &__alert--warning {
+    svg,
+    #{$this}__alert-status {
+      color: $icon-serious;
+    }
+  }
+
+  &__alert--alarm {
+    svg,
+    #{$this}__alert-status {
+      color: $icon-critical;
+    }
+  }
+}

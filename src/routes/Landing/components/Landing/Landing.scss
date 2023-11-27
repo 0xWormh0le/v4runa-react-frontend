@@ -1,0 +1,110 @@
+@import 'styles/variables';
+
+$tile-width: 20rem;
+$tile-height: 23rem;
+
+.Landing {
+  background-image: url('../../../../images/varuna-background.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    @include mq($until: wide) {
+      max-width: $tile-width * 2;
+    }
+
+    @include mq($from: wide) {
+      max-width: $tile-width * 4;
+    }
+  }
+
+  &__tile {
+    padding: $spacer;
+
+    @include mq($until: mobile) {
+      width: 100%;
+    }
+
+    @include mq($from: mobile, $until: wide) {
+      width: 50%;
+    }
+
+    @include mq($from: wide) {
+      width: 25%;
+    }
+  }
+
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+
+    @include mq($until: mobile) {
+      font-size: 0.7rem;
+    }
+
+    @include mq($until: wide) {
+      width: 100%;
+    }
+
+    @include mq($from: wide) {
+      width: 50%;
+    }
+  }
+
+  &__title-welcome {
+    font-size: 4em;
+    color: white;
+  }
+
+  &__title-begin {
+    font-size: 2em;
+    color: white;
+  }
+
+  &__card {
+    max-width: $tile-width;
+    margin: auto;
+    min-height: $tile-height;
+    height: 100%;
+    box-shadow: 3px 3px 9px 2px rgba(0, 0, 0, 0.41) !important;
+  }
+
+  &__card-body {
+    padding: $spacer * 1.8 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__card-title {
+    font-size: 1.5rem;
+    margin-top: $spacer * 0.5;
+  }
+
+  &__card-desc {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  &__card-button {
+    display: inline-block !important;
+    margin-top: $spacer;
+    width: 8rem;
+    text-transform: uppercase;
+  }
+}
